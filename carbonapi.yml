@@ -32,8 +32,6 @@ cpus: 0
 # Timezone, default - local
 tz: ""
 
-functionsConfig:
-    graphiteWeb: ./graphiteWeb.example.yaml
 maxBatchSize: 0
 graphite:
     # Host:port where to send internal metrics
