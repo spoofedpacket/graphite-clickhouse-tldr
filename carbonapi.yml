@@ -8,7 +8,7 @@
 # you should set it to URL of go-carbon's carbonserver module
 # or graphite-clickhouse's http url.
 # Listen address, should always include hostname or ip address and a port.
-listen: "localhost:8081"
+listen: "127.0.0.1:8081"
 # Controls headers that would be passed to the backend
 headersToPass:
   - "X-Dashboard-Id"
