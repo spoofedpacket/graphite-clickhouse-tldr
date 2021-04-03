@@ -24,3 +24,11 @@ graphite-clickhouse:
   - "./graphite-clickhouse.conf:/etc/graphite-clickhouse/graphite-clickhouse.conf"
   links:
   - clickhouse
+carbonapi:
+  image: gographite/carbonapi:v0.15.2
+  volumes:
+  - "./carbonapi.yaml:/etc/carbonapi.yaml"
+  ports:
+  -"8081:8081"
+  links:
+  - graphite-clickhouse
