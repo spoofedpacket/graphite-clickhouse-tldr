@@ -27,8 +27,8 @@ graphite-clickhouse:
 carbonapi:
   image: gographite/carbonapi:v0.15.2
   volumes:
-  - "./carbonapi.yaml:/etc/carbonapi.yaml"
+  - "./carbonapi.yml:/etc/carbonapi.yml"
   ports:
-  -"8081:8081"
+  - "8081:8081"
   links:
   - graphite-clickhouse
