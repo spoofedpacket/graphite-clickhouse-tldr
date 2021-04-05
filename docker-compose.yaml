@@ -28,7 +28,11 @@ carbonapi:
   image: gographite/carbonapi:v0.15.2
   volumes:
   - "./carbonapi.yml:/etc/carbonapi.yml"
-  ports:
-  - "8081:8081"
   links:
   - graphite-clickhouse
+grafana:
+  image: grafana/grafana
+  ports:
+  - "3000:3000"
+  links:
+  - carbonapi
